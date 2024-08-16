@@ -8,7 +8,7 @@ The main inspiration was from my personal experience, where I found it difficult
 In this webapp, its main purpose is that you are able to post photos along with a desciption about your talents in multiple categories: arts, sports, music and writing. However, you can also like the posts, or as I have named it in my webapp "Endorse".
 
 # How it's built
-This was made with python, html and css
+This was made with flask, python, html and css
 
 # Challenges encountered
 There were many challenges in the making of this webapp. Firstly was the code for the css styling as there was a certain way I wanted it to feel, and it required me to research quite a bit on how it could be done, though relatively compared to the other challenges this was simple. The main challenge was wrapping my head around the logic for the python code, such as the endorsing or liking system for each post, or the use of multiple html pages for the different categories as before this we had only be using like one or two html pages in class, in this one I used eight. I would say the hardest challenge was the uploading system as I had to search up about os which I had never learned before. 
