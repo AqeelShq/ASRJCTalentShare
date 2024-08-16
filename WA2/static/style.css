@@ -1,0 +1,106 @@
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+}
+
+body {
+  font-weight: bold;
+  font-family: Segoe UI;
+  text-align: center;
+  background-color: #ffe7b4;
+  color:white;
+}
+
+h1{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color:white;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  width: 50%;
+  text-align: center;
+  margin: 0 auto; 
+  padding: 10px; 
+  display: block;
+}
+
+h2 {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  width: 100%;
+}
+
+td {
+background: linear-gradient(to right, #ff7e5f, #feb47b);
+padding: 10px;
+box-shadow: 10 10 10px rgba(0, 0, 0, 0.1);
+border: none;
+
+}
+
+a {
+    color: inherit; /* Inherits the color from the parent element */
+    text-decoration: none; /* Removes the underline */
+    cursor: pointer; /* Keeps the pointer cursor to indicate a clickable link */
+}
+
+
+/* FOOTER */
+.fixed-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); /* Optional: Adds a shadow for better visibility */
+}
+
+/* IMAGE */
+#menu {
+  filter: sepia(100%) hue-rotate(-30deg) brightness(90%) saturate(150%);
+}
+
+
+/* TEXT RESIZE */
+.resize-text {
+  font-size: 16px; /* Initial font size */
+  transition: font-size 0.3s ease; /* Smooth transition */
+}
+.resize-text:hover {
+  font-size: 24px; /* Font size when hovered */
+}
+
+td, th, h1, input, textarea, p, a {
+  padding: 10px;
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+td:hover, th:hover, h1:hover, input:hover, textarea:hover, p:hover, a:hover {
+  transform: scale(1.1); /* Increase size to 110% on hover */
+  color: black;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload, textarea, input, #button {
+  display: inline-block;
+  padding: 5px 20px;
+  cursor: pointer;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+p {
+  color:black;
+  font-size: 13px;
+  width: 50%;
+  margin: 0 auto; /* Center the element horizontally */
+  padding: 10px;
+}

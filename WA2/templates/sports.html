@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title> Talent Share Main Page</title>
+  </head>
+<body>
+  <h1><a href="{{ url_for('index') }}">ASRJC TALENT SHARE</a> </h1>
+
+<h2> SPORTS </h2>
+
+  <form action="/upload" method="POST" enctype="multipart/form-data">
+    <textarea name="description" placeholder="POST Description" rows="5" cols="30" required></textarea><br><br>
+    <label for="file-upload" class="custom-file-upload">Choose File</label>
+
+    <input type="file" id="file-upload"  name="file">
+    <input type="hidden" name="folder" value="sports">
+    <input type="submit" value="Upload" class="custom-file-upload">
+  </form>
+  <br><br>
+  
+  {% if posts %}
+    {% for filename, detail in posts.items() %}
+      <p> {{ detail[3] }} </p>
+      <img src="{{ url_for('static', filename='sports_uploads/' ~ filename) }}" width="50%" height="50%"> <br>
+      <p> {{ detail[0] }} | 👍 {{ detail[2] }} </p>
+
+    <form action="/like" method="POST">
+      <input type="submit" value="Endorse Post!" class="custom-file-upload">
+      <input type="hidden" name="filename" value="{{ filename }}">
+      <input type="hidden" name="folder" value="{{ request.path }}">
+    </form>
+    <br><br>
+    {% endfor %}
+  {% else %}
+    <p> No posts currently D: </p>
+  {% endif %}
+
+  <br><br><br><br>
+  
+  <div class="fixed-footer">
+      TalentShare.com
+  </div>
+</body>
+</html>

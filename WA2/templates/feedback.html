@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title> Talent Share Main Page</title>
+  </head>
+<body>
+  <h1><a href="{{ url_for('index') }}">ASRJC TALENT SHARE</a> </h1>
+
+  <h2> Feedback Form </h2>
+
+<form action="/feedback" method="POST">
+  <textarea name="feedback" placeholder="Write feedback here..." rows="5" cols="30" required></textarea><br><br>
+  <input type="submit" value="Submit" class="custom-file-upload">
+
+</form>
+  
+  <div class="fixed-footer">
+      All feedback is appreciated!
+  </div>
+</body>
+</html>
