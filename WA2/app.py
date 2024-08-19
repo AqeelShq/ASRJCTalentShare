@@ -116,9 +116,10 @@ def arts():
     with open('uploads.csv', 'r') as file:
         reader = csv.reader(file)
         for row in reader:
-            filename, description, folder, likes, username = row
-            if folder == 'arts':
-                posts[filename] = [description, folder, likes, username]
+            if len(row) == 5:
+                filename, description, folder, likes, username = row
+                if folder == 'arts':
+                    posts[filename] = [description, folder, likes, username]
     return render_template('arts.html', posts=posts)
     
 @app.route('/sports')
@@ -128,9 +129,10 @@ def sports():
     with open('uploads.csv', 'r') as file:
         reader = csv.reader(file)
         for row in reader:
-            filename, description, folder, likes, username = row
-            if folder == 'sports':
-                posts[filename] = [description, folder, likes, username]
+            if len(row) == 5:
+                filename, description, folder, likes, username = row
+                if folder == 'sports':
+                    posts[filename] = [description, folder, likes, username]
     return render_template('sports.html', posts=posts)
 
 @app.route('/music')
@@ -140,9 +142,10 @@ def music():
     with open('uploads.csv', 'r') as file:
         reader = csv.reader(file)
         for row in reader:
-            filename, description, folder, likes, username = row
-            if folder == 'music':
-                posts[filename] = [description, folder, likes, username]
+            if len(row) == 5:
+                filename, description, folder, likes, username = row
+                if folder == 'music':
+                    posts[filename] = [description, folder, likes, username]
     return render_template('music.html', posts=posts)
 
 @app.route('/writing')
@@ -152,9 +155,10 @@ def writing():
     with open('uploads.csv', 'r') as file:
         reader = csv.reader(file)
         for row in reader:
-            filename, description, folder, likes, username = row
-            if folder == 'writing':
-                posts[filename] = [description, folder, likes, username]
+            if len(row) == 5:
+                filename, description, folder, likes, username = row
+                if folder == 'writing':
+                    posts[filename] = [description, folder, likes, username]
     return render_template('writing.html', posts=posts)
 
 @app.route('/like', methods=['POST'])
